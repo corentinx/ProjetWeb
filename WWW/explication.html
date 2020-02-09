@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+         <link type="text/css" rel="stylesheet" href="main.css" />
+        <title>L'image</title>
+    </head > 
+	
+  <body>
+  	<header>
+			<h1 id ="titre">L'Image</h1>
+	</header>
+    <nav id ="menu">
+	    <ul id ="liste">
+			<li><a href="Index.html">Accueil</a></li>
+			<li><a href="caractéristiques.html">Caractéristiques</a></li>
+			<li><a href="compressions.html">Compression</a></li>
+			<li><a href="lociciels.html">Logiciels</a></li>
+			<li><a href="explication.html">Explication</a></li>
+		</ul>
+	</nav>
+	<div id="page">
+		<h1>Comment est compressée une image?</h1>
+
+		 <hr>
+
+		 <h3>Compression JPEG</h3>
+
+		<p>
+		 Les inventeurs du JPEG sont partis d’un constat :<br> <i><b>Un pixel est souvent entouré de pixels de la même couleur (ou presque).</b></i>
+		</p>
+
+		<p>
+		 L’idée de compression est donc la suivante :<br> 
+		<b>Au lieu de sauvegarder les couleurs de tous les pixels, on ne mémorise qu’un pixel sur 2, ou sur 3, …  et ainsi le poids de l’image est donc divisé par 2, par 3, … !</b>
+		</p>
+
+		<p>
+		 <b>Puis ensuite pour afficher l’image, on calcule la couleur des pixels manquants en faisant la moyenne des couleurs des pixels voisins !</b>
+		</p>
+
+		<p>Le JPEG remplace la couleur par la moyenne des couleurs des pixels voisins</p> 
+
+		<p>
+		<u>Conclusion</u> : On comprend bien pourquoi le JPEG fait baver les contours d’écriture mais a un très bon rendu dans les dégradés !
+	    </p>
+
+		<p><u><b>Quelques conseils :</b></u></p>
+
+		<ol>
+			<li>
+				Certains éditeurs graphiques compressent plus intelligemment que d’autres, pour afficher des textes très nets tout en compressant un peu plus le reste de l'image.
+			</li>
+			<li>
+				Comme le JPEG produit des images plus floues, alors il est conseillé d'accentuer le contraste de l'image avant de compresser.
+			</li>
+			<li>
+				Ne jamais re-compresser jamais un fichier déjà compressé !
+			</li>
+		</ol>
+
+		<p>Le JPEG n'est pas un format de travail</p>
+
+		  <h3>Compression GIF</h3>
+
+		  <p>
+		  Les inventeurs du GIF sont partis d’un constat :<br>
+		  <b><i>Un dessin ne contient qu’une centaine de couleurs au maximum.</i></b>
+		  </p>
+
+
+		  <p>
+		  L’idée de compression est donc la suivante :<br>
+		  <i><b>Au lieu de mémoriser chaque pixel en couleur RVB (donc sur 24 bits), alors :</b></i>
+		  </p>
+
+
+
+		  <ol> 
+		       <li> 
+		       <i><b>On crée une palette regroupant les 256 couleurs du dessin (indexées de 0 à 255 ... donc sur 8 bits)</b></i>
+		       </li>
+
+		       <li>
+		       <i><b>Puis la couleur de chaque pixel de l’image est remplacée par la valeur de l’index (donc sur 8 bits)</b></i>
+		       </li>
+
+		  </ol>
+
+		<p>Le GIF remplace la couleur RVB par un  numéro (entre 0 et 255) </p>
+
+        <img
+		 src="images/image html 1.PNG"
+		 height="200px"
+		 width="530px"
+		/>
+		
+		
+		 <p>
+		  <b>Et si l’image initiale contient davantage de couleurs ?</b><br>
+		  Alors l’algorithme ne retient que les 256 couleurs principales (c’est-à-dire les plus utilisées dans l’image).
+		  </p>
+
+		 <p><b>Peut-on réduire encore plus ?</b></p> 
+		 <p>
+		 Oui, en diminuant encore la palette (comprise entre 2 et 256 couleurs) !!
+		 </p>
+
+		<p><b>Comment est géré un fond transparent ?</b></p>
+		<p>
+		La transparence est gérée comme les autres couleurs de la palette, c’est-à-dire qu’un pixel transparent est codé comme un pixel sans couleur.
+		</p>
+
+	
+
+		<p>
+		<u>Conclusion</u> : On comprend bien que le GIF préserve la netteté d’une écriture (noir et blanc) car mais que les dégradés de couleurs deviennent des bandes de couleurs unies ... disgracieuses !
+        </p>
+
+
+		<h3>Le format PNG</h3>
+
+		<p>
+		Le PNG est un format standardisé, établi en 1990 par le W3C pour contourner la licence propriétaire GIF.
+		</p>
+
+		<ul>
+
+			<li>
+			PNG-8 : <b>palette</b> de 256 couleurs (RVB + le Transparent) : chaque pixel est codé sur 8 bits.
+		    </li>
+
+		    <li>
+		    	PNG-24 : <b>vraies couleurs RVB</b> : chaque pixel est
+		    	codé sur 24 bits (pas de canal Alpha)
+		    </li>
+
+		    <li>
+		    	PNG-32 : <b>vraies couleurs avec alpha RVBA</b> : chaque 
+		    	pixel est codé sur 32 bits (en vraie couleur RVB + 1 
+		    	canal Alpha de translucidité).
+		    </li>
+
+		</ul>
+
+		<p>Le PNG est un format non destructeur</p>
+
+		<p>
+		Le PNG est apte à dépasser les « vraies couleurs » en décomposant chaque canal R, V, B, Alpha en 512 nuances (au lieu de 256) … encore faut-il que l’écran et l’OS permettent un tel affichage !!!
+		</p>
+
+		<p>
+		Des logiciels d’optimisation existent : PNG Optimizer, ScriptPNG, Fast Image Optimizer … En revanche, il n’est pas possible de faire des animations en PNG … (uniquement en GIF). 
+		</p>	
+	</div>
+	<footer>
+	        <h4>Site produit par Corentin Ferré et Sidonie Morvan dans le cadre du mini-projet 2.</h4>
+    </footer>
+  </body>
+</html>

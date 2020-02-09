@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+         <link type="text/css" rel="stylesheet" href="main.css" />
+        <title>L'image</title>
+    </head > 
+    <body>
+        <header>
+            <h1 id ="titre">L'Image</h1>
+        </header>
+            <nav id ="menu">
+                <ul id ="liste">
+                    <li><a href="Index.html">Accueil</a></li>
+                    <li><a href="caractéristiques.html">Caractéristiques</a></li>
+                    <li><a href="compressions.html">Compression</a></li>
+                    <li><a href="lociciels.html">Logiciels</a></li>
+                    <li><a href="explication.html">Explication</a></li>
+                </ul>
+            </nav>
+        <div id="page">
+            <br>
+            <br>
+            <table id="tableauID"></table>
+            <br>
+            <br>
+            <input type="text" id="champID4" name="champName4" />
+            <input type="button" value="Envoyer" onClick="afficheTab()" />
+            <br>
+            <br>
+            <div id="resultat4">Entrez un nombre !</div>
+            <script>
+                function afficheTab() {
+                    champTexte4 = document.getElementById('champID4').value;
+
+                    if (Number.isInteger(+(champTexte4))) {
+                        tab.push(parseInt(champTexte4));
+                    }
+                    if (isNaN('champTexte4')) {
+                        document.getElementById('resultat4').innerHTMl = "Essayez plutôt avec un nombre...";
+                    }
+
+                    tri();
+                    var contenuDuTableau = "<tr>";
+                    for(var i = 0; i < tab.length; i++){
+                        contenuDuTableau = contenuDuTableau + "<td>"+tab[i]+"</td>"
+                    }
+
+                    document.getElementById('tableauID').innerHTML=contenuDuTableau;
+                }
+                function tri() {
+                    for(let a = 0; a < tab.length -1; a++){
+                        let min = a;
+                        for(j = a; j < tab.length; j++) {
+                            if (tab[j] < tab[min]) {
+                                min = j;
+                            }
+                        }
+                        if(min !=a) {
+                            let tabValue = tab[a];
+                            tab[a] = tab[min];
+                            tab[min] = tabValue;
+                        }
+                    }
+                }
+
+                var tab = [7 , 12 , 47];
+                afficheTab();
+            </script>
+        </div>
+    </body>
+</html>

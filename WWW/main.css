@@ -1,0 +1,156 @@
+*{
+	font-family: "Arial";
+}
+
+html{ /* fonctionne pour tout le site */
+	background-color: #5bc0be; /* couleur de fond de secours */
+	background-image: linear-gradient(#5bc0be 0%, #5bc0be 33%, #3a506b 66%, #1c2541 100%);
+	/* couleur de fond dégradé */
+}
+
+body { /* body = header + divpage + footer etc...*/
+ 	margin : 0; /* mise des marges à 0 */
+ }
+
+
+header{ /* partie avec le titre du site */
+	margin-top: 0; /* le header est collé au haut de la page */
+	background: white; /* fond blanc */
+	width: 100%; /* largeur du header = largeur de l'écran*/
+	height: 750px; /* hauteur*/
+	text-align: center; /* texxte centré */
+}
+
+#titre{ /* titre qui figure dans le header */
+	font-size: 9em; /* 9x la taille h1*/
+	background-color: white;
+	color: black; /*couleur noire*/
+	padding bottom:50px;
+	line-height: 750px; 
+	text-align: center; /*centre le texte*/
+}
+
+nav#menu { /*barre du menu */
+	position: sticky; /*reste collé en haut de la page*/
+	top: 0px; /*position par rapport au sticky*/
+	background:#3a506b;/*couleur de fond*/
+	width: 100%;/*largeur*/
+	height: 75px;/*hauteur*/
+}
+
+#liste {/*id de la liste ul*/
+	padding: 0; 
+	margin:0;/*padding et marges à 0*/
+	text-align: center; /* texte centré*/
+}
+
+#liste li { /*élèments li de l'élément liste */
+	display: inline-block; /*organisation en blocs*/
+	width: 15%;/*largeur d'un bloc */
+	transition: 1s;/* durée de l'animation*/
+	text-align: center;/*texte centré*/
+	background-color:#3a506b; 
+}
+#liste li:hover{/*animation lorsque la souris est sur un élément li de l'élément liste*/
+	width: 20%; /*largeur d'un bloc pendant l'animation*/
+	transition: 1s; /* durée de l'animation*/
+}
+#liste a {/*éléments a dans élément liste*/
+	color: white; /*couleur du texte*/
+	text-decoration: none; /*texte sobre*/
+	font-weight: bold; /*gras*/
+	font-size: 1.25em;/*taille un peu plus grand que standard*/
+	display: block; /* les élements a sont en blocs*/
+	line-height: 75px; /*texte centré sur l'axe y*/
+	transition: 1s; /* durée de l'animation*/
+}
+#liste a:hover{ /*animation lorsque la souris passe sur l'élément a (lien) de l'élément liste*/
+	color: #5bc0be;/*couleur du texte*/
+	font-size: 1.25em;/*taille de l'écriture*/
+	transition: 1s; /*durée de l'animation*/
+}
+div#page {/*partie avec le contenu*/
+
+	width: 85%;/*largeur*/
+	border-width: 3px;/*épaisseur des bordures du cadre*/
+	border-style: ridge;/*style des bordures*/
+	border-color: #3a506b;/*couleur des bordures*/
+	margin: auto;/*marges se déterminent seules a partir de la largeur de la div*/
+	padding: 5%;/*marges du contenu dans le cadre*/
+	margin-top: 7.5%;
+	margin-bottom: 5%;
+	background: white;
+	color: black;
+	text-align: justify;
+}
+
+
+footer {
+	text-align:center;
+	width:85%;
+	border-width: 3px;
+	border-style: ridge;
+	border-color: #3a506b;
+	margin: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+	margin-top: 5%;
+	margin-bottom: 7.5%;
+	background: white;
+	color: black;
+}
+
+
+h1{
+	font-size: 2em;
+	padding:0;
+	margin: 0;
+}
+
+h2{
+	font-size: 0.95em;
+}
+
+h1,h2 {
+	text-align: center;
+	/*font-family: Times New Roman;*/
+	font-weight: bold;
+	color: white;
+	background-color: #3a506b;
+
+}
+hr{
+	color: #3a506b;
+	border-top: ridge;
+}
+#im{
+	line-height: 100px;
+	text-align: center;
+}
+
+
+td{
+	text-align: center;
+}
+table,td{
+	border-width: 3px;
+	border-style: ridge;
+	border-color: #3a506b;
+	border-collapse: collapse;
+	empty-cells: hide;
+	text-align:center;
+}
+.gras{
+	font-weight: bold;
+}
+.italique{
+	font-style: italic;
+}	 
+.souligne{
+	text-decoration: underline;
+}
+.soustitre{
+	font-size: 0.75em;
+}
